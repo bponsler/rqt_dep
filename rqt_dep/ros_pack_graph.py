@@ -42,8 +42,8 @@ from python_qt_binding.QtGui import  QIcon, QImage, QPainter
 from python_qt_binding.QtWidgets import QFileDialog, QGraphicsScene, QWidget, QCompleter
 from python_qt_binding.QtSvg import QSvgGenerator
 
-import rosservice
-import rostopic
+#import rosservice
+#import rostopic
 
 from .dotcode_pack import RosPackageGraphDotcodeGenerator
 from qt_dotgraph.pydotfactory import PydotFactory
@@ -316,6 +316,8 @@ class RosPackGraph(Plugin):
         self._nodes, self._edges = self.dot_to_qt.dotcode_to_qt_items(self._current_dotcode, self._options['highlight_level'])
 
     def _generate_tool_tip(self, url):
+        return ""  # TODO: implement generate tool tip
+    
         if url is not None and ':' in url:
             item_type, item_path = url.split(':', 1)
             if item_type == 'node':
