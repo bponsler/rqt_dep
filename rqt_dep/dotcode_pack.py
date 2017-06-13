@@ -94,8 +94,8 @@ class RosPackageGraphDotcodeGenerator:
         """
 
         # defaults
-        selected_names = filter(lambda x: x is not None and x != '', selected_names)
-        excludes = filter(lambda x: x is not None and x != '', excludes)
+        selected_names = list(filter(lambda x: x is not None and x != '', selected_names))
+        excludes = list(filter(lambda x: x is not None and x != '', excludes))
         if selected_names is None or selected_names == []:
             selected_names = ['.*']
             self.depth = 1
