@@ -31,7 +31,7 @@ install(FILES plugin.xml DESTINATION share/${PROJECT_NAME})
 
 install(DIRECTORY resource DESTINATION share/${PROJECT_NAME})
 
-install(PROGRAMS scripts/rqt_dep DESTINATION bin)
+install(PROGRAMS scripts/rqt_dep DESTINATION lib/${PROJECT_NAME})
 
 ament_export_dependencies(ament_cmake)
 ament_export_include_directories(${INCLUDE_DIRS})

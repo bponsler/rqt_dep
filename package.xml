@@ -14,7 +14,7 @@
 
   <author>Thibault Kruse</author>
 
-  <buildtool_depend>ament</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
   <exec_depend version_gte="0.2.19">python_qt_binding</exec_depend>
